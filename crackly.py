@@ -1,3 +1,4 @@
+import sys
 import subprocess
 import shlex
 import time
@@ -32,7 +33,22 @@ def is_wifi_password_correct(ssid, password, timeout=5):
 
 # Usage example
 if __name__ == "__main__":
-    ssid = "Your_SSID"
+
+    print("  _____                _    _       ")
+    print(" / ____|              | |  | |      ")
+    print("| |     _ __ __ _  ___| | _| |_   _ ")
+    print("| |    | '__/ _` |/ __| |/ / | | | |")
+    print("| |____| | | (_| | (__|   <| | |_| |")
+    print(" \_____|_|  \__,_|\___|_|\_\_|\__, |")
+    print("                               __/ |")
+    print("                              |___/ ")
+
+
+    if len(sys.argv) < 2:
+        print("Usage: python script.py <SSID>")
+        sys.exit(1)
+
+    ssid = sys.argv[1]
     timeout = 2  # Timeout in seconds
 
     all_chars = string.ascii_letters + string.digits + string.punctuation
@@ -47,5 +63,3 @@ if __name__ == "__main__":
                 print("The WiFi password is correct.")
             else:
                 print("The WiFi password is incorrect.")
-
-
