@@ -34,6 +34,8 @@ def is_wifi_password_correct(ssid, password, timeout=5):
 # Usage example
 if __name__ == "__main__":
 
+    print("")
+
     print("  _____                _    _       ")
     print(" / ____|              | |  | |      ")
     print("| |     _ __ __ _  ___| | _| |_   _ ")
@@ -42,6 +44,9 @@ if __name__ == "__main__":
     print(" \_____|_|  \__,_|\___|_|\_\_|\__, |")
     print("                               __/ |")
     print("                              |___/ ")
+
+    print("")
+    print("")
 
 
     if len(sys.argv) < 2:
